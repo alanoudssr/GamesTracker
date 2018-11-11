@@ -1,9 +1,6 @@
 
-<%= @results[0].name%>
+<%= form_tag '/search', method: :get do %>
+        <%= text_field_tag :term, params[:term], placeholder: 'Search for Game' %>
+        <%# submit_tag 'Search' %>
+      <% end %>
 
-
- <% client = IGDB::Client.new ENV["IGDB_API_KEY"]
-    @sresult = client.search_games "witcher", {fields: "name,release_dates,esrb.synopsis,rating"} %>
-<% @sresult.each do |sr| %>
-<p><%= sr.name %></p>
-<% end %>

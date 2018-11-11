@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Searching for <%= @term %></h3>
+  <p>resaults:</p>
+  <% if @result.empty? %>
+    <p>No match found</p>
+  <% else %>
+    <ul>
+    <% @result.each do |user| %>
+      <li>
+        <div class="card">
+       <%=  user.name  %> 
+        </div>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>
