@@ -108,4 +108,4 @@ production:
   <<: *default
   database: GameTracker_production
   username: GameTracker
-  password: <%= ENV['GameTracker_DATABASE_PASSWORD'] %>
+  password: <%= ENV['GAMETRACKER_DATABASE_PASSWORD'] %>
