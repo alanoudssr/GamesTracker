@@ -9,6 +9,6 @@ class GameupController < ApplicationController
     client = IGDB::Client.new ENV["IGDB_API_KEY"]
 
     @term = params[:term]
-    @result = client.search_games @term, {fields: "name,release_dates,esrb.synopsis,rating"}
+    @result = client.search_games @term, {fields: "name,release_dates,esrb.synopsis,rating,cover"}
   end
 end
