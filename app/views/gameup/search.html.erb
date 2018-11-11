@@ -1,13 +1,14 @@
-
+<div class="centered">
 <%= form_tag '/search', method: :get do %>
         <%= text_field_tag :term, params[:term], placeholder: 'Search for Game' %>
         <%# submit_tag 'Search' %>
       <% end %>
 
 
-<div class="container">
   <h3>Search results for <%= @term %></h3>
-  <p>resaults:</p>
+</div>
+<div class="container">
+
   <% if @result.empty? %>
     <p>No match found</p>
   <% else %>
@@ -18,6 +19,7 @@
         <% if game.cover %>
        <img src="<%=game.cover.url%>" alt="">      
         <% end  %>
+        
        <p class="title"><%=  game.name  %> </p>
         <% if game.release_dates %>
        <p>Released: <%=  game.release_dates[0].y  %> </p>
