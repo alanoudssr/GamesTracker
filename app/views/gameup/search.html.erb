@@ -15,8 +15,9 @@
        <img src="<%=game.cover.url%>" alt="">      
         <% end  %>
 
+<% if user_signed_in? %>
         <p class="add-btn"><%= render partial: 'form' %></p>
-
+<% end %>
        <p class="title clear-fix"><%=  game.name  %> </p>
        <% @game_name = game.name  %>
         <% if game.release_dates %>

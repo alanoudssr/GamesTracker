@@ -1,5 +1,4 @@
 class Gameup
-  include HTTParty
   require "igdb_client"
 
   # initialize with api_key

@@ -14,7 +14,7 @@ class GamesController < ApplicationController
   def update
     game = Game.find_by(id: params[:id])
     game.update(game_params)
-    redirect_to game_path(game)
+    redirect_to users_show_path
   end
 
   def new
@@ -23,7 +23,7 @@ class GamesController < ApplicationController
 
   def create
     game = current_user.games.create(game_params)
-    redirect_to games_path
+    redirect_to users_show_path
   end
 
   def destroy
@@ -35,6 +35,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :cover, :release_date, :user_id)
+    params.require(:game).permit(:name, :cover, :release_date, :user_id, :category)
   end
 end

@@ -6,8 +6,17 @@ Rails.application.routes.draw do
   get "games/new"
   devise_for :users
 
+  devise_scope :user do
+    authenticated :user do
+      root "users#show", as: :authenticated_root
+    end
+
+    unauthenticated do
+      root "gameup#index", as: :unauthenticated_root
+    end
+  end
+
   resources :users, only: [:show]
-  root "gameup#index"
   get "/search", to: "gameup#search"
   post "/search", to: "gameup#create"
   get "gameup/index"

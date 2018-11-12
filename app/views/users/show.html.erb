@@ -1,12 +1,74 @@
 <h2 class="clear-fix username"><%= current_user.username %></h2>
 <hr>
+
 <div>
+
 <h3 class="cat-name">Currently Playing</h3>
+
 <% current_user.games.each do |g|%>
+
+<% if g.category == "current" %>
+
 <div class="game">
+
 <img src="<%= g.cover %>" alt="">
+<p><%= link_to 'Change Status', "/games/#{g.id}/edit" %> <p>
 <p><%= link_to 'Remove', "/games/#{g.id}", method: "delete" %> <p>
-</div>
+
 <% end %>
+
 </div>
 
+<% end %>
+
+</div>
+
+<hr class="clear-fix">
+
+<div>
+
+<h3 class="cat-name">Finished</h3>
+
+<% current_user.games.each do |g|%>
+
+<% if g.category == "finished" %>
+
+<div class="game">
+
+<img src="<%= g.cover %>" alt="">
+<p><%= link_to 'Change Status', "/games/#{g.id}/edit" %> <p>
+<p><%= link_to 'Remove', "/games/#{g.id}", method: "delete" %> <p>
+
+<% end %>
+
+</div>
+
+<% end %>
+
+</div>
+
+<hr class="clear-fix">
+
+<div>
+
+<h3 class="cat-name">Want To Play</h3>
+
+<% current_user.games.each do |g|%>
+
+<% if g.category == "to_play" %>
+
+<div class="game">
+
+<img src="<%= g.cover %>" alt="">
+<p><%= link_to 'Change Status', "/games/#{g.id}/edit" %> <p>
+<p><%= link_to 'Remove', "/games/#{g.id}", method: "delete" %> <p>
+
+<% end %>
+
+</div>
+
+<% end %>
+
+</div>
+
+<hr class="clear-fix">

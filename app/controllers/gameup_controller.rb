@@ -20,6 +20,6 @@ class GameupController < ApplicationController
   private
 
   def game_params
-    params.permit(:name, :cover, :release_date, :user_id)
+    params.permit(:name, :cover, :release_date, :user_id, :category)
   end
 end

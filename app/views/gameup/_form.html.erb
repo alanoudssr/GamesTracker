@@ -2,5 +2,6 @@
   <%= hidden_field_tag :name, @game_name  %>
   <%= hidden_field_tag :cover, @game_cover %>
   <%= hidden_field_tag :release_date, @game_date %>
+  <%= hidden_field_tag :category, "current" %>
   <%= f.submit 'Add Game' %>
 <% end %>

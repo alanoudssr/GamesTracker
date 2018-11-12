@@ -1,6 +1,5 @@
-
-<%= form_tag '/search', method: :get do %>
-        <%= text_field_tag :term, params[:term], placeholder: 'Search for Game' %>
-        <%# submit_tag 'Search' %>
-      <% end %>
-
+<h2 class="homepage-p">Create a profile and start keeping records of your games!</h2>
+<div class="homepage-div">
+<span><%= link_to 'Log In', new_user_session_path %></span>
+<span><%= link_to "Sign Up", new_user_registration_path %></span>
+</div>
