@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ body {
+     margin: 0;
+ }
+
  .card {
      height: 25vh;
      width: 20vw;
@@ -23,6 +27,66 @@
      float: left;
     }
 
+    .game {
+        float: left;
+        margin: 1vw;
+        text-align: center;
+    }
+
+    .game > p {
+        margin-top: 8px;
+    }
+
     .centered {
         text-align: center;
     }
+
+    .add-btn {
+        float: left;
+        margin-left: 55px;
+        margin-top: 55px;
+    }
+
+    .card > img , nav > span {
+        float: left;
+    }
+
+    .clear-fix {
+        clear: both;
+    }
+
+    .title {
+        padding-top: 10px;
+    }
+    
+   nav > span {
+       margin-left: 2vw;
+   }
+
+   nav {
+       background-color: darkblue;
+       height: 8vh;
+       line-height: 8vh;
+       margin:0 ;
+   }
+
+   nav > span > a {
+    color: white;
+    text-decoration: none;
+   }
+
+   .right-most {
+margin-left: 70vw;
+   }
+
+   .username,  .cat-name {
+       text-align: center;
+       font-family: Arial, Helvetica, sans-serif;
+       text-transform: uppercase;
+       font-variant: small-caps;
+   }
+
+   .cat-name {
+       font-size: 2vw;
+       color: darkblue;
+   }

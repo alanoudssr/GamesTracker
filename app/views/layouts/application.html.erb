@@ -11,11 +11,18 @@
 
   <body>
   <nav>
-  <span><%= link_to 'Log In', new_user_session_path %></span>
-
-<span><%= link_to "Sign Up", new_user_registration_path %></span>
-
+  <% if user_signed_in? %>
+  <span><%= link_to 'Profile', '/users/show' %></span>
 <span><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></span>
+  <% else %>
+  <span><%= link_to 'Log In', new_user_session_path %></span>
+<span><%= link_to "Sign Up", new_user_registration_path %></span>
+<% end %>
+<span class="right-most"><%= form_tag '/search', method: :get do %>
+        <%= text_field_tag :term, params[:term], placeholder: 'Search for a game' %>
+        <%# submit_tag 'Search' %>
+      <% end %> </span>
+
   </nav>
     <%= yield %>
   </body>

@@ -1,10 +1,4 @@
 <div class="centered">
-<%= form_tag '/search', method: :get do %>
-        <%= text_field_tag :term, params[:term], placeholder: 'Search for Game' %>
-        <%# submit_tag 'Search' %>
-      <% end %>
-
-
   <h3>Search results for <%= @term %></h3>
 </div>
 <div class="container">
@@ -17,12 +11,17 @@
     <% @result.each do |game| %>
         <div class="card">
         <% if game.cover %>
+        <% @game_cover = game.cover.url %>
        <img src="<%=game.cover.url%>" alt="">      
         <% end  %>
-        
-       <p class="title"><%=  game.name  %> </p>
+
+        <p class="add-btn"><%= render partial: 'form' %></p>
+
+       <p class="title clear-fix"><%=  game.name  %> </p>
+       <% @game_name = game.name  %>
         <% if game.release_dates %>
-       <p>Released: <%=  game.release_dates[0].y  %> </p>
+        <% @game_date =  game.release_dates[0].y %>
+       <p class="clear-fix">Released: <%=  game.release_dates[0].y  %> </p>
         <% end  %>
         </div>
     <% end %>

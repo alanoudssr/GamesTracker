@@ -10,5 +10,16 @@ class GameupController < ApplicationController
 
     @term = params[:term]
     @result = client.search_games @term, {fields: "name,release_dates,esrb.synopsis,rating,cover"}
+    @game = Game.new
+  end
+
+  def create
+    game = current_user.games.create(game_params)
+  end
+
+  private
+
+  def game_params
+    params.permit(:name, :cover, :release_date, :user_id)
   end
 end
