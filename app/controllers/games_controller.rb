@@ -14,7 +14,7 @@ class GamesController < ApplicationController
   def update
     game = Game.find_by(id: params[:id])
     game.update(game_params)
-    redirect_to users_show_path
+    redirect_to user_path(current_user.id)
   end
 
   def new
@@ -23,13 +23,13 @@ class GamesController < ApplicationController
 
   def create
     game = current_user.games.create(game_params)
-    redirect_to users_show_path
+    redirect_to user_path(current_user.id)
   end
 
   def destroy
     game = Game.find_by(id: params[:id])
     game.destroy
-    redirect_to users_show_path
+    redirect_to user_path(current_user.id)
   end
 
   private

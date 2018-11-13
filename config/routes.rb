@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root "users#show", as: :authenticated_root
+      root "gameup#show", as: :authenticated_root
     end
 
     unauthenticated do
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   get "/search", to: "gameup#search"
   post "/search", to: "gameup#create"
+  post "/", to: "gameup#create"
   get "gameup/index"
   resources :games
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

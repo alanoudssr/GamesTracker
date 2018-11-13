@@ -5,6 +5,10 @@ class GameupController < ApplicationController
     @results = client.games 1942, {fields: "name"}
   end
 
+  def show
+    @games = Game.all
+  end
+
   def search
     client = IGDB::Client.new ENV["IGDB_API_KEY"]
 

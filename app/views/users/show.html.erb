@@ -1,11 +1,11 @@
-<h2 class="clear-fix username"><%= current_user.username %></h2>
+<h2 class="clear-fix username"><%= @user.username %></h2>
 <hr>
 
 <div>
 
 <h3 class="cat-name">Currently Playing</h3>
 
-<% current_user.games.each do |g|%>
+<% @user.games.each do |g|%>
 
 <% if g.category == "current" %>
 
@@ -29,7 +29,7 @@
 
 <h3 class="cat-name">Finished</h3>
 
-<% current_user.games.each do |g|%>
+<% @user.games.each do |g|%>
 
 <% if g.category == "finished" %>
 
@@ -53,7 +53,7 @@
 
 <h3 class="cat-name">Want To Play</h3>
 
-<% current_user.games.each do |g|%>
+<% @user.games.each do |g|%>
 
 <% if g.category == "to_play" %>
 

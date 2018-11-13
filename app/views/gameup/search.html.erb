@@ -9,6 +9,10 @@
        
 
     <% @result.each do |game| %>
+       <% @game_name = game.name  %>
+       <% if game.release_dates %>
+        <% @game_date =  game.release_dates[0].y %>
+        <% end %>
         <div class="card">
         <% if game.cover %>
         <% @game_cover = game.cover.url %>
@@ -16,10 +20,18 @@
         <% end  %>
 
 <% if user_signed_in? %>
+<div class="popup">
+  <div class="popUp-content">
+            <div class="popUp_Border">
+                            <span class="close">&times;</span>
+                            <p>Game Added!</p>
+        </div>
+</div>
+</div>
         <p class="add-btn"><%= render partial: 'form' %></p>
 <% end %>
+
        <p class="title clear-fix"><%=  game.name  %> </p>
-       <% @game_name = game.name  %>
         <% if game.release_dates %>
         <% @game_date =  game.release_dates[0].y %>
        <p class="clear-fix">Released: <%=  game.release_dates[0].y  %> </p>
@@ -29,3 +41,14 @@
 
   <% end %>
 </div>
+<script>
+
+ $('.formButton').click( function () {
+       $('.popup').css('display',"block");
+    });
+
+ $('.close').click( function () {
+       $('.popup').css('display',"none");
+    });
+
+</script>

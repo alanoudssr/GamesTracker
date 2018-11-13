@@ -18,6 +18,10 @@
      margin: 0;
  }
 
+.centerlized {
+    text-align: center;
+}
+
  .card {
      height: 25vh;
      width: 20vw;
@@ -76,7 +80,7 @@
    }
 
    .right-most {
-margin-left: 70vw;
+margin-left: 60vw;
    }
 
    .username,  .cat-name {
@@ -117,3 +121,49 @@ margin-left: 70vw;
        font-weight: bold;
          -webkit-text-stroke: 1px white;
    }
+
+   .search-field {
+       font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+       width: 20vw;
+       height: 3vh;
+
+   }
+
+
+   .popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* the popup content */
+.popUp-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: rgb(155, 155, 155);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(82, 82, 82);
+  text-decoration: none;
+  cursor: pointer;
+}

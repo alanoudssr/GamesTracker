@@ -1,0 +1,18 @@
+<h2 class="centerlized">Recently Added Games</h2>
+<hr>
+
+<% @games.each do |game| %>
+<%@game_name  = game.name %>
+<%@game_cover = game.cover %>
+  <% @game_date =  game.release_date %>
+        <div class="card">
+       
+       <img src="<%=game.cover%>" alt="">      
+<% if user_signed_in? %>
+        <p class="add-btn"><%= render partial: 'form' %></p>
+<% end %>
+       <p class="title clear-fix"><%= game.name %> </p>
+       <p class="clear-fix">Released: <%=  game.release_date %> </p>
+       
+        </div>
+    <% end %>
