@@ -84,6 +84,8 @@ margin-left: 60vw;
    }
 
    .username,  .cat-name {
+       margin: 0;
+       padding: 0;
        text-align: center;
        font-family: Arial, Helvetica, sans-serif;
        text-transform: uppercase;
@@ -91,12 +93,20 @@ margin-left: 60vw;
    }
 
    .cat-name , .homepage-p{
+       margin-bottom: 1%;
        font-size: 2vw;
+      font-family: 'Press Start 2P', cursive;
        color: darkblue;
+       text-decoration: underline;
+       text-decoration-style: dashed;
    }
 
    .homepage-p {
+       padding: 5%;
+       font-family: 'VT323', monospace;
        margin-top: 25vh;
+       text-decoration: none;
+       font-size: 3vw;
    }
 
 
@@ -167,3 +177,28 @@ margin-left: 60vw;
   text-decoration: none;
   cursor: pointer;
 }
+
+.profile-header {
+    width: 100vw;
+    height: 40vh;
+    line-height: 40vh;
+    background: image-url('http://wall2born.com/data/out/647/image-43786649-80s-wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: blueviolet;
+    box-shadow: 1px 1px 1px 1px grey;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    position: relative;
+}
+  .username {
+      position: absolute;
+      top: 10vh;
+      left: 45%;
+      color: rgb(73, 146, 255);
+      font-family: 'Press Start 2P', cursive;
+      text-shadow: 3px 3px 1px blue;
+
+  }

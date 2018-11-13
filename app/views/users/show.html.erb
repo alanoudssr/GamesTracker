@@ -1,5 +1,7 @@
-<h2 class="clear-fix username"><%= @user.username %></h2>
-<hr>
+<div class="clear-fix profile-header">
+<%= image_tag('header2.gif', style: "height: 40vh; width: 100vw; background-size: contain;", class: 'profile-img') %>
+<h2 class="clear-fix username">@<%= @user.username %></h2>
+</div>
 
 <div>
 
