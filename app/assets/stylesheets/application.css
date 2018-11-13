@@ -182,7 +182,7 @@
     width: 100vw;
     height: 40vh;
     line-height: 40vh;
-    background: image-url('http://wall2born.com/data/out/647/image-43786649-80s-wallpaper.jpg');
+    background: url('http://wall2born.com/data/out/647/image-43786649-80s-wallpaper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: blueviolet;
