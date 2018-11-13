@@ -1,7 +1,7 @@
 <h2 class="centralized">Recently Added Games</h2>
 <hr>
 
-<% @games.each do |game| %>
+<% @games.reverse.each do |game| %>
 <%@game_name  = game.name %>
 <%@game_cover = game.cover %>
   <% @game_date =  game.release_date %>
