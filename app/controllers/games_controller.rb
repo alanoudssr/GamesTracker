@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+  respond_to :html, :json
+
   def index
     @games = Game.all
   end
@@ -14,7 +16,7 @@ class GamesController < ApplicationController
   def update
     game = Game.find_by(id: params[:id])
     game.update(game_params)
-    redirect_to user_path(current_user.id)
+    respond_with game
   end
 
   def new

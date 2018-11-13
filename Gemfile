@@ -13,6 +13,7 @@ gem 'httparty'
 
 gem "igdb_client"
 
+gem 'best_in_place'
 
 gem 'pg', '>= 0.18', '< 2.0'
 
