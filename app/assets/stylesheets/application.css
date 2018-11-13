@@ -23,13 +23,13 @@
 }
 
  .card {
-     height: 25vh;
-     width: 20vw;
-     padding: 2vh;
-     box-shadow: 1px 1px 1px 1px grey;
-     margin: 2vh;
-     float: left;
-    }
+    height: 25vh;
+    width: 20vw;
+    padding: 2vh;
+    box-shadow: 1px 1px 1px 1px grey;
+    margin: 2vh;
+    float: left;
+}
 
     .game {
         float: left;
@@ -80,7 +80,7 @@
    }
 
    .right-most {
-margin-left: 60vw;
+    margin-left: 60vw;
    }
 
    .username,  .cat-name {
