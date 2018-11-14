@@ -14,9 +14,9 @@ class GamesController < ApplicationController
   end
 
   def update
-    game = Game.find_by(id: params[:id])
-    game.update(game_params)
-    respond_with game
+    @game = Game.find_by(id: params[:id])
+    @game.update(game_params)
+    respond_with @game
   end
 
   def new
