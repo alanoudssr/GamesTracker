@@ -104,6 +104,9 @@
 
    .homepage-p {
        padding: 5%;
+       padding-top: 1%;
+       padding-bottom: 0;
+       margin-bottom: 0;
        font-family: 'VT323', monospace;
        margin-top: 25vh;
        text-decoration: none;
@@ -201,4 +204,15 @@
       font-family: 'Press Start 2P', cursive;
       text-shadow: 3px 3px 1px blue;
 
+  }
+
+  .home-img-div {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+  }
+
+  .homepage-div{
+      margin-top: 0;
+      padding-top: 0;
   }
