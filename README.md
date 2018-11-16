@@ -1,24 +1,47 @@
-# README
+# GameTracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GameTracker is an app that was created to help the user keep track of the games they've played, want to play, or are currently playing.
 
-Things you may want to cover:
+---
+##Features
 
-* Ruby version
+- Searching a large database of video games.
+- Creating an account.
+- Adding games to your profile.
+- Changing the status of your game (finished, currently playing, or planning to play).
+- Removing games from your profile.
 
-* System dependencies
+---
+##API Used
 
-* Configuration
+GameTracker uses [IGDB](https://github.com/tastycake/igdb_api)'s database as a source of information for all the games on its library. It gets game covers, titles, and release dates.
 
-* Database creation
+---
+##Gems Used
 
-* Database initialization
+- [Devise](https://github.com/plataformatec/devise)
+- [idgb_client](https://github.com/darkstego/igdb_client)
+- [Best_in_Place](https://github.com/bernat/best_in_place)
 
-* How to run the test suite
+---
+##Link
 
-* Services (job queues, cache servers, search engines, etc.)
+[GameTracker](https://limitless-refuge-57046.herokuapp.com/)
 
-* Deployment instructions
+---
+##Future Plans
 
-* ...
+- Offer the ability to add friends.
+- Offer the ability to customize user profile.
+- Adding a progress bar.
+- Offer user ratings on games.
+- Offer ability to arrange based on platform.
+
+---
+##Credits
+- Jack Jeffress [@ga-wolf](https://github.com/ga-wolf)
+- Moath Althawad [@mfalthaw](https://github.com/mfalthaw/)
+- Trevor Preston [@trevorpreston](https://github.com/trevorpreston)
+- [Header Image](http://www.capybaragames.com/)
+- Google Fonts
+- JQquery
