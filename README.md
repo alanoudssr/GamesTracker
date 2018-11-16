@@ -12,6 +12,15 @@ GameTracker is an app that was created to help the user keep track of the games 
 - Removing games from your profile.
 
 ---
+## Technologies Used
+
+- Ruby on Rails
+- JS
+- HTML5
+- CSS
+- JQuery
+
+---
 ## API Used
 
 GameTracker uses [IGDB](https://github.com/tastycake/igdb_api)'s database as a source of information for all the games on its library. It gets game covers, titles, and release dates.
